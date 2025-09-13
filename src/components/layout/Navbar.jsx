@@ -2,7 +2,7 @@
 export default function Navbar() {
   return (
     <div>
-      <ul className='flex items-center gap-8'>
+      <ul className='flex items-center gap-4'>
         <li className="cursor-pointer">Home</li>
         <li className="cursor-pointer">About Us</li>
         <li className="cursor-pointer">Contact</li>
