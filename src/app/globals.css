@@ -17,3 +17,8 @@ body{
 
     --color-brown: #ad3e04;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fef1de !important; /* ✅ arrow color */
+}
