@@ -29,6 +29,18 @@ export const poppins = Poppins({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    <head>
+    <meta
+          httpEquiv="Content-Security-Policy"
+          content="
+            default-src 'self' https://satvik-sugandh.vercel.app/ http://localhost:3000;
+            img-src 'self' data: https://satvik-sugandh.vercel.app/ http://localhost:3000;
+            script-src 'self' 'unsafe-inline' 'unsafe-eval' https://satvik-sugandh.vercel.app/ http://localhost:3000;
+            style-src 'self' 'unsafe-inline' https://satvik-sugandh.vercel.app/ http://localhost:3000;
+            font-src 'self' data: https://satvik-sugandh.vercel.app/ http://localhost:3000;
+            connect-src 'self' https://satvik-sugandh.vercel.app/ http://localhost:3000;"
+        />
+    </head>
       <body className={`${poppins.className} antialiased`}>
         <Header />
         {children}
