@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Navbar from './Navbar'
 import Cart from './Cart'
-import { Menu } from "lucide-react";
+import { Menu, User } from "lucide-react";
 
 function Header() {
 
@@ -30,14 +30,19 @@ function Header() {
 
 
 
+        <div className='flex items-center'>
 
-        <div className='sm:block hidden'>
-          <Cart />
+          <div className='flex items-center gap-2'>
+            <User />
+            <Cart />
+          </div>
+
+          <div className='block sm:hidden pr-4' onClick={() => setMenuOpen(!menuOpen)}>
+            <Menu size={24} />
+          </div>
         </div>
 
-        <div className='block sm:hidden pr-4' onClick={() => setMenuOpen(!menuOpen)}>
-          <Menu size={24} />
-        </div>
+
       </div>
 
 
