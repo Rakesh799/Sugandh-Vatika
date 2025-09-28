@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Discover divine fragrances at SatvikSugandh - your trusted online store for premium dhoop, agarbatti, and natural incense sticks. Perfect for pooja, meditation, and creating a peaceful ambiance. Shop pure aromas today!",
   verification: {
-    google: "t5_rwvubrQGzJVOHwhAFGq7IOhvxahE4C3-SLpc3uFk",
+    google: "t8UateZHH5_KSvh-wHISjA6579jLjyPNOCePGhYnym8",
   },
   icons: {
     icon: [
