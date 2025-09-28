@@ -7,7 +7,7 @@ export const metadata = {
   title: "SatvikSugandh",
   description: "Discover divine fragrances at SatvikSugandh - your trusted online store for premium dhoop, agarbatti, and natural incense sticks. Perfect for pooja, meditation, and creating a peaceful ambiance. Shop pure aromas today!",
   verification: {
-    google: "google-site-verification=t5_rwvubrQGzJVOHwhAFGq7IOhvxahE4C3-SLpc3uFk", 
+    google: "google-site-verification=t5_rwvubrQGzJVOHwhAFGq7IOhvxahE4C3-SLpc3uFk",
   },
   icons: {
     icon: [
@@ -32,6 +32,17 @@ export const poppins = Poppins({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* <!-- Google tag (gtag.js) --> */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1L8S2FLZS8"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
+
+          gtag('config', 'G-1L8S2FLZS8');
+        </script>
+      </head>
       <body className={`${poppins.className} antialiased`}>
         <Header />
         {children}
