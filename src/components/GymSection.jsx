@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import { ExternalLink } from "lucide-react";
+
 export default function GymSection() {
     const data = [
         { day: "Monday", workout: "Shoulder Abs" },
@@ -24,8 +26,10 @@ export default function GymSection() {
                     </React.Fragment>
                 ))}
             </div>
-            <Link href={'/songs'} className="flex justify-center cursor-pointer font-bold">
-                Go to Songs Page
+            <Link href={'/songs'} className="flex justify-center cursor-pointer font-semibold">
+                <div className="px-4 py-1 rounded-lg border-brown border mx-auto mb-4 flex gap-2 items-center">
+                Go to Songs Page  <ExternalLink size={20}/>
+                </div>
             </Link>
         </>
     )

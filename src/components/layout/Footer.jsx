@@ -48,11 +48,11 @@ function Footer() {
             <h2 className='font-semibold'>Quick Contact</h2>
             <ul className='mt-4'>
               <li className='flex gap-1 items-center cursor-pointer'>
-                <PhoneCall size={20}/>
+                <PhoneCall size={20} />
                 +91-987-654-3210
               </li>
               <li className='flex gap-1 items-center cursor-pointer'>
-                <Mail size={20}/>
+                <Mail size={20} />
                 satviksugandh@gmail.com
               </li>
             </ul>
@@ -62,11 +62,46 @@ function Footer() {
 
 
       <div className='flex justify-center items-center bg-beige gap-2 py-4'>
-        <div className="h-11 w-11 rounded-full border flex justify-center items-center cursor-pointer">Fb</div>
-        <div className="h-11 w-11 rounded-full border flex justify-center items-center cursor-pointer">X</div>
-        <div className="h-11 w-11 rounded-full border flex justify-center items-center cursor-pointer">In</div>
-        <div className="h-11 w-11 rounded-full border flex justify-center items-center cursor-pointer">Yt</div>
-        <div className="h-11 w-11 rounded-full border flex justify-center items-center cursor-pointer">Li</div>
+        <div className="h-11 w-11 rounded-full border flex justify-center items-center cursor-pointer relative">
+          <Image
+            src={'/images/social-icons/fb.svg'}
+            alt='Fb'
+            fill
+            className='object-contain p-2'
+          />
+        </div>
+        <div className="h-11 w-11 rounded-full border flex justify-center items-center cursor-pointer relative">
+          <Image
+            src={'/images/social-icons/x.svg'}
+            alt='X'
+            fill
+            className='object-contain p-[10px]'
+          />
+        </div>
+        <div className="h-11 w-11 rounded-full border flex justify-center items-center cursor-pointer relative">
+          <Image
+            src={'/images/social-icons/insta.svg'}
+            alt='In'
+            fill
+            className='object-contain p-2'
+          />
+        </div>
+        <div className="h-11 w-11 rounded-full border flex justify-center items-center cursor-pointer relative">
+          <Image
+          src={'/images/social-icons/yt.svg'}
+          alt='Yt'
+          fill
+          className='object-contain p-2'
+          />
+        </div>
+        <div className="h-11 w-11 rounded-full border flex justify-center items-center cursor-pointer relative">
+          <Image
+          src={'/images/social-icons/linkedin.svg'}
+          alt='Li'
+          fill
+          className='object-contain p-2'
+          />
+        </div>
       </div>
 
       <div className='text-center bg-brown text-beige py-2 text-base'>
