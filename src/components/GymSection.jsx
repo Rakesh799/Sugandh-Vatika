@@ -7,8 +7,8 @@ export default function GymSection() {
         { day: "Monday", workout: "Shoulder Abs" },
         { day: "Tuesday", workout: "Leg" },
         { day: "Wednesday", workout: "Back Abs" },
-        { day: "Thursday", workout: "Leg" },
-        { day: "Friday", workout: "Chest Tricep" },
+        { day: "Thursday", workout: "Chest Tricep" },
+        { day: "Friday", workout: "Leg" },
         { day: "Saturday", workout: "Back Bicep Abs" },
     ];
     return (
