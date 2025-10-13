@@ -3,12 +3,12 @@ import songsData from '@/data/songs.json';
 
 export default function SongsList() {
   return (
-    <div className="p-4 max-w-3xl mx-auto space-y-2">
+    <div className="p-4 max-w-3xl mx-auto space-y-2 flex flex-col">
       {songsData.map((song) => (
         <Link
           key={song.id}
           href={`/songs/${song.slug}`}
-          className="block text-blue-600 hover:underline"
+          className="text-brown border border-brown py-2 rounded-full px-4"
         >
           {song.title}
         </Link>
