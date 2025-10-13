@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "title": "Shiva Tandav Stotram",
+      "slug": "shiva-tandav-stotram",
+      "component": "ShivaTandavStotram",
+      "audio": "/audio/shiva-tandav-stotram.mp3",
+      "description": "A powerful hymn dedicated to Lord Shiva, full of rhythm and devotion.",
+      "tags": ["shiva", "hymn", "stotra"],
+      "image": "/images/shiva-tandav.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Ganesh Stotra",
+      "slug": "ganesh-stotra",
+      "component": "GaneshStotra",
+      "audio": "/audio/ganesh-stotra.mp3",
+      "description": "A stotra praising Lord Ganesha, remover of obstacles and bestower of wisdom.",
+      "tags": ["ganesh", "stotra", "devotional"],
+      "image": "/images/ganesh-stotra.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Breathless",
+      "slug": "breathless",
+      "component": "Breathless",
+      "audio": "/songs/breathless.mp3",
+      "description": "A contemporary song with mesmerizing vocals, perfect for relaxing moments.",
+      "tags": ["contemporary", "vocal", "relaxing"],
+      "image": "/images/breathless.jpg"
+    }
+  ]
+  
