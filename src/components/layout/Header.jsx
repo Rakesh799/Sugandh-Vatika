@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Navbar from './Navbar'
 import Cart from './Cart'
 import { Menu, User } from "lucide-react";
+import {motion, AnimatePresence} from "framer-motion";
 
 function Header() {
 
@@ -46,9 +47,23 @@ function Header() {
       </div>
 
 
-      <div className={`bg-beige sm:hidden w-full py-2 ${menuOpen ? 'flex' : 'hidden'} justify-center`}>
-        <Navbar />
-      </div>
+
+
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="bg-beige sm:hidden w-full py-2 flex justify-center"
+          >
+            <Navbar />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+
     </div>
   )
 }

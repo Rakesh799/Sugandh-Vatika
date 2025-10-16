@@ -1,15 +1,7 @@
-import Breathless from '@/components/songs/Breathless'
-import GaneshStotra from '@/components/songs/GaneshStotra'
-import ShivaTandavStotram from '@/components/songs/ShivaTandavStotram'
 import songsData from '@/data/songs.json';
+import { ArrowLeftFromLine } from 'lucide-react';
 import Link from 'next/link';
 
-// Map component names to actual imports
-const componentsMap = {
-    ShivaTandavStotram,
-    GaneshStotra,
-    Breathless,
-};
 
 export default function SongPage({ params }) {
     const { slug } = params;
@@ -19,11 +11,12 @@ export default function SongPage({ params }) {
         return <p className="p-4 text-center text-red-600">Song not found!</p>;
     }
 
-    const SongComponent = componentsMap[song.component];
 
     return (
         <div className="p-4 max-w-3xl mx-auto space-y-6">
-            <Link href={'/songs'}>Go Back</Link>
+            <Link href={'/songs'}>
+                <ArrowLeftFromLine />
+            </Link>
             <h1 className="text-2xl font-bold">{song.title}</h1>
             {song.audio && (
                 <audio controls className="w-full mt-4">
@@ -31,8 +24,6 @@ export default function SongPage({ params }) {
                     Your browser does not support the audio element.
                 </audio>
             )}
-            
-            {SongComponent && <SongComponent />}
 
         </div>
     );
