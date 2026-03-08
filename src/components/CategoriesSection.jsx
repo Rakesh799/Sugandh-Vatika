@@ -14,8 +14,8 @@ export default function CategoriesSection() {
                         data-alt="Sandalwood blocks and incense sticks aesthetic arrangement"
                         src="/images/category-images/sandlewood.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-6 left-6">
-                        <h3 className="text-white text-xl font-semibold italic">Sandalwood</h3>
+                    <div className="absolute md:bottom-6 md:left-6 bottom-3 left-3">
+                        <h3 className="text-white text-base md:text-xl font-semibold italic">Sandalwood</h3>
                     </div>
                 </a>
                 {/* <!-- Category Card 2 --> */}
@@ -24,8 +24,8 @@ export default function CategoriesSection() {
                         data-alt="Fresh pink rose petals surrounding natural incense"
                         src="/images/category-images/roses.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-6 left-6">
-                        <h3 className="text-white text-xl font-semibold italic">Rose</h3>
+                    <div className="absolute md:bottom-6 md:left-6 bottom-3 left-3">
+                        <h3 className="text-white text-base md:text-xl font-semibold italic">Rose</h3>
                     </div>
                 </a>
                 {/* <!-- Category Card 3 --> */}
@@ -34,8 +34,8 @@ export default function CategoriesSection() {
                         data-alt="Dried lavender sprigs and purple themed wellness products"
                         src="/images/category-images/lavender.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-6 left-6">
-                        <h3 className="text-white text-xl font-semibold italic">Lavender</h3>
+                    <div className="absolute md:bottom-6 md:left-6 bottom-3 left-3">
+                        <h3 className="text-white text-base md:text-xl font-semibold italic">Lavender</h3>
                     </div>
                 </a>
                 {/* <!-- Category Card 4 --> */}
@@ -45,8 +45,8 @@ export default function CategoriesSection() {
                         data-alt="Sacred spiritual setup with candles and meditation props"
                         src="/images/category-images/spiritual.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-6 left-6">
-                        <h3 className="text-white text-xl font-semibold italic">Spiritual</h3>
+                    <div className="absolute md:bottom-6 md:left-6 bottom-3 left-3">
+                        <h3 className="text-white text-base md:text-xl font-semibold italic">Spiritual</h3>
                     </div>
                 </a>
                 {/* <!-- Category Card 5 --> */}
@@ -55,8 +55,8 @@ export default function CategoriesSection() {
                         data-alt="Elegant premium wooden gift box for incense"
                         src="/images/category-images/gift-packs.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-6 left-6">
-                        <h3 className="text-white text-xl font-semibold italic">Gift Packs</h3>
+                    <div className="absolute md:bottom-6 md:left-6 bottom-3 left-3">
+                        <h3 className="text-white text-base md:text-xl font-semibold italic">Gift Packs</h3>
                     </div>
                 </a>
             </div>

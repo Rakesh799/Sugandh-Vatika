@@ -4,11 +4,11 @@ import AboutBrandSection from "@/components/AboutBrandSection";
 import BestSellersSection from "@/components/BestSellersSection";
 import CategoriesSection from "@/components/CategoriesSection";
 import FeaturedProductsSection from "@/components/FeaturedProductsSection";
+import HeroSection from "@/components/HeroSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import SocialGallerySection from "@/components/SocialGallerySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
-import HeroSection from "@/components/shared/HeroSection";
 
 export default function Home() {
   return (

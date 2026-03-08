@@ -4,7 +4,7 @@ export default function NewsletterSection() {
       <div className="max-w-4xl mx-auto bg-brown rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div className="relative z-10 space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold font-display italic">Scent-sational Updates</h2>
+          <h2 className="text-2xl md:text-4xl font-bold font-display italic">Scent-sational Updates</h2>
           <p className="text-white/80 max-w-lg mx-auto">
             Join our inner circle for exclusive early access to new collections and soulful rituals delivered to your
             inbox.
