@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+        rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b84900",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#23170f",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+            <div class="flex items-center gap-12">
+                <a class="flex items-center gap-2 group" href="#">
+                    <img alt="SatvikSugandh Logo" class="h-10 w-10"
+                        data-alt="Minimalist geometric lotus flower logo design"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsAEuLkgun7zT-gBA5WUWcmlFhzEjVDQMTrv1k0A0iQveFH0X3GzDPePPr-IjgbOreh5kpD337uN4koLOo0u1QKabx1VGDdWk5R-jpEUMnb5u0841x3Hk3-F47Md97Otgck6tXXrykbI0UJ4tiRN-r6h-K_5ogbiUn1G8IzUN0IB2-vMVXUpK5SOmaK9wkr_Rkfosz7TtvMcYLu9MGJAeuyA9AQ8_XSYmLVOHjwRS7rV57_2lB0S_1UiPIFc1iVT8a0b22bwsBYyQ" />
+                    <span class="text-2xl font-bold tracking-tight text-primary font-display">SatvikSugandh</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a class="hover:text-primary transition-colors" href="#">Fragrances</a>
+                    <a class="hover:text-primary transition-colors" href="#">Collections</a>
+                    <a class="hover:text-primary transition-colors" href="#">Our Story</a>
+                    <a class="hover:text-primary transition-colors" href="#">Gifts</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="hidden lg:flex items-center bg-primary/5 dark:bg-white/5 rounded-full px-4 py-2 w-64">
+                    <span class="material-symbols-outlined text-slate-400 text-sm">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-400"
+                        placeholder="Find your scent..." type="text" />
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 hover:bg-primary/10 rounded-full transition-colors relative">
+                        <span class="material-symbols-outlined">person</span>
+                    </button>
+                    <button class="p-2 hover:bg-primary/10 rounded-full transition-colors relative">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        <span
+                            class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-white font-bold">2</span>
+                    </button>
+                    <button class="md:hidden p-2 hover:bg-primary/10 rounded-full transition-colors">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[85vh] w-full overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
+                data-alt="Cinematic close up of glowing incense stick with ethereal smoke plumes"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKfD3YiGKL5_4L3WIqX_9GUkedH7CufI208JIq5uQcAMhU1oa_v_Tb7c_fjCQ30uNjseveTkVG53hSJHaM1MwG8YAkbTWUFuDPoj6p2w7vKBctN6ghlEiQ59XSlXKaqX6whWgt_c6mGYTpQILyX7nLpkS63b_GfZVqGjl8JkCH76oGpbhvJWlN5nIaYzZd1xM3n8uI-FBrcXD07voweu3FbskL2-YRWQ6FK5ZFArJ8YZhY6c8SQuPaw0hy8Mn8LbIUv0bs7eHdKNM');">
+            </div>
+            <div class="relative flex h-full items-center justify-center text-center px-6">
+                <div class="max-w-3xl space-y-8">
+                    <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight">Pure Fragrance for <br /><span
+                            class="italic font-light">Peaceful Living</span></h1>
+                    <p class="text-lg md:text-xl text-white/90 font-light max-w-xl mx-auto">Experience the essence of
+                        tranquility with our handcrafted natural incense, made from botanical extracts.</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-full font-semibold transition-all shadow-xl shadow-primary/20 w-full sm:w-auto">Shop
+                            Now</button>
+                        <button
+                            class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-10 py-4 rounded-full font-semibold transition-all w-full sm:w-auto">Explore
+                            Fragrances</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Categories Section -->
+        <section class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Discover the Collections</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Category Card 1 -->
+                <a class="group relative aspect-[3/4] overflow-hidden rounded-xl" href="#">
+                    <img alt="Sandalwood"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                        data-alt="Sandalwood blocks and incense sticks aesthetic arrangement"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP75XzRgC69uMj1JMiPj2eYroNX5-VYmGzxkfZoOK4CjRfUSiNT2HYHXP36-HdeYsMijLIUSyFHFPGmrIsihtsfil9XB2tlwGqHWNfak_OyNILsQPzsykCJ8avmv3ffLCdkzU52oxT__QtWL9QcNkb5mOFnwekOPR06JmWnAe0u9GcyghJj9hsCUTfK7CK9Zm9_8tTV5-GsrqTAXn60XuBwvrM5BVSND5Li5_BhVLOsxdGgQBhW90ZqO6evvie8YQprrhUpWrtq3c" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h3 class="text-white text-xl font-semibold italic">Sandalwood</h3>
+                    </div>
+                </a>
+                <!-- Category Card 2 -->
+                <a class="group relative aspect-[3/4] overflow-hidden rounded-xl" href="#">
+                    <img alt="Rose" class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                        data-alt="Fresh pink rose petals surrounding natural incense"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGDQKVLCzFRwqm0HE8NQK3xtZKuvCw_SRIv11Br1zzWQqHDIQ6GgFp2cwgRBCA9Lba4WquQvga9a1Capa0LW5shIHHYbS_Mn-7kR1cOkoMMPQt9w3ai2WMt_6eNlgzAuRguljM2MC4V4qUMLK-fUv0LKNzmyTvSdo0kFdl1Cb344XSPcrm8bdO9cO41RTqK8J2OpQaN8NyK7SwHObpgD6bZXuF8jkLXLUTLU1ORB4ondNyMeMggjOLS0LJcIicNxhDG8_B5Gqth0c" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h3 class="text-white text-xl font-semibold italic">Rose</h3>
+                    </div>
+                </a>
+                <!-- Category Card 3 -->
+                <a class="group relative aspect-[3/4] overflow-hidden rounded-xl" href="#">
+                    <img alt="Lavender" class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                        data-alt="Dried lavender sprigs and purple themed wellness products"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQBr2mDjHfgizlbQ5cpkyFNzSp7wO8zoCGYxrDW6P1BsRndplDja0OnCaeMyq4DUb_eff4W7xenPh75fD7LTMGT-OplscAv4r5zwWOF1P2lWME5e5P7eBZ1TfAypVihBMEG1t1vS2FrGblXYNw-A7ztNUqfi2iZU2MVl2Dm3N3K2sTPY-tCwSwhs_lraMK8uVxrzan2uQqCa6EXcWA9eopokRmIgD0t0abyRrIRiGM1Q07yyR5mnw4EQ7782WSnHydwvvSY4Vt1jc" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h3 class="text-white text-xl font-semibold italic">Lavender</h3>
+                    </div>
+                </a>
+                <!-- Category Card 4 -->
+                <a class="group relative aspect-[3/4] overflow-hidden rounded-xl" href="#">
+                    <img alt="Spiritual"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                        data-alt="Sacred spiritual setup with candles and meditation props"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp6TaFSCOsovfG63jnvz7DfPW3uXMfi_3YVt5HGyJW1991Qkktn2dLZiJ78DBwhKkHAt0uRYsT5mDENXTNHknUpOYe4PCkzFxIKxWbq0E3fjMMJ5WlnsfDf9WR2NAGKlTEIas31QcqIxXCzVhs1Y5vsIqz3DxaqbBBwMnzs5MX9KVVA24JBZDY2sM2VPyLnWnuE6AZg-3N1L63qAZ64fwqvNhDPxO5YfUuSZMP7n2XDcQKj2yG09cRYIdhhPTLigP4IDRlVxdM2Tk" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h3 class="text-white text-xl font-semibold italic">Spiritual</h3>
+                    </div>
+                </a>
+                <!-- Category Card 5 -->
+                <a class="group relative aspect-[3/4] overflow-hidden rounded-xl" href="#">
+                    <img alt="Gifts" class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                        data-alt="Elegant premium wooden gift box for incense"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBLae6CRP6yNqFYA7TapL9XTP7RRZPU8FrCKwJ-yyXIeLc9CwGrsjVaM-UdLfUmmxwBpoXrp2ZKschF1dQTBAkD_5e9rTZfICQMmXU9iESWJoCSIN-shhvbpYVlf-XORugQyxUzwyQQfs-mY4Nin9ixwDaY4WO8hRI6wQ7lFNBmjPscZ65EY5GaGP7iKTZ_yrqIT4sEbf56X8mxNlpaQy0wyelX5GPTIjFXcMHrfbVPJb8GkSnUNDcunE7HHjzFrVztBDfO6I5I28" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h3 class="text-white text-xl font-semibold italic">Gift Packs</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- Why Choose Us -->
+        <section class="bg-primary/5 dark:bg-white/5 py-24 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div
+                    class="flex flex-col items-center text-center p-8 rounded-2xl bg-white dark:bg-background-dark shadow-sm border border-primary/5">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">eco</span>
+                    <h3 class="font-bold mb-2">Natural Ingredients</h3>
+                    <p class="text-sm text-slate-500 font-light">Pure resins, herbs, and essential oils sourced
+                        responsibly.</p>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-8 rounded-2xl bg-white dark:bg-background-dark shadow-sm border border-primary/5">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">auto_awesome</span>
+                    <h3 class="font-bold mb-2">Handcrafted Fragrance</h3>
+                    <p class="text-sm text-slate-500 font-light">Artisanal methods passed through generations.</p>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-8 rounded-2xl bg-white dark:bg-background-dark shadow-sm border border-primary/5">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">schedule</span>
+                    <h3 class="font-bold mb-2">Long Lasting Aroma</h3>
+                    <p class="text-sm text-slate-500 font-light">Consistent burn and lingering subtle scents for hours.
+                    </p>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-8 rounded-2xl bg-white dark:bg-background-dark shadow-sm border border-primary/5">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">psychology_alt</span>
+                    <h3 class="font-bold mb-2">Eco Friendly</h3>
+                    <p class="text-sm text-slate-500 font-light">Sustainable packaging and zero-waste philosophy.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Products -->
+        <section class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold">Featured Fragrances</h2>
+                    <p class="text-slate-500 mt-2">Our most loved signature scents</p>
+                </div>
+                <a class="text-primary font-bold flex items-center gap-1 hover:underline underline-offset-4" href="#">
+                    View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div
+                    class="group relative flex flex-col bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-primary/5">
+                    <div class="relative aspect-square overflow-hidden">
+                        <img alt="Mysore Sandalwood"
+                            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                            data-alt="Traditional sandalwood incense pack on marble surface"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoJiIkIwqeDQPsjlm5Fdyi_vthGf1bbiqit3F2Ps6jyK3-zqEU0u6zHnngHCc6S1QrtjjxcoJedcBvqOIvDEsoiVmTl4_tG_B_aII25IP37vCdrJPI_Z9sWdgf7EMTsoC5ggxiS6wtnAP-Z8WjuTuRnJvYoeNh0x51y5RfTUahmXFiiS_bjHlpbIhB1QdpYFV6vn4jKUB6lgMVECHNvRzb84Fm38Shgb6nUPppdAy6OCYg7i61FbdOQz9pyj2sbjTldYeg7PJA6e8" />
+                        <button
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="material-symbols-outlined text-slate-900">visibility</span>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-1 mb-2">
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="text-[10px] text-slate-400 font-bold ml-1">(42)</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">Mysore Sandalwood</h3>
+                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">Pure Mysore sandalwood oil blended with
+                            sacred herbs.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-xl font-display font-bold text-primary">₹599</span>
+                            <button
+                                class="bg-primary/10 hover:bg-primary text-primary hover:text-white p-2 rounded-lg transition-colors">
+                                <span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div
+                    class="group relative flex flex-col bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-primary/5">
+                    <div class="relative aspect-square overflow-hidden">
+                        <img alt="Vedic Rose"
+                            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                            data-alt="Rose petal infused incense sticks in elegant box"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY9CirHTE2-89m1NXJ6YdE3lVGkOR_donjzCOISr8gjlYebLH-F89dnyTUL1zoKRsPjlvJIO7R09DleutZYWyMvalKg3XN_huQQRJbmsMgtDOL595heFvRoVOS4OQLfrGl_UaNNT0-Mli5ut47R17TBmPWSNGnuWjmvQfm-ceP2fPUxu9jer2xQnywjjUpK0odGJSOANiFkrp3O6SskOV3SRi1juzREGyKaOJ-LV2WV33Sq1IkQtAeLu9BbVdar9GCJ8JYJi9IDIk" />
+                        <button
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="material-symbols-outlined text-slate-900">visibility</span>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-1 mb-2">
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary">star</span>
+                            <span class="text-[10px] text-slate-400 font-bold ml-1">(35)</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">Vedic Rose</h3>
+                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">The romantic essence of fresh Kannauj roses.
+                        </p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-xl font-display font-bold text-primary">₹450</span>
+                            <button
+                                class="bg-primary/10 hover:bg-primary text-primary hover:text-white p-2 rounded-lg transition-colors">
+                                <span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div
+                    class="group relative flex flex-col bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-primary/5">
+                    <div class="relative aspect-square overflow-hidden">
+                        <img alt="Temple Oudh"
+                            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                            data-alt="Rich dark oudh incense sticks premium collection"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7Qxxqj5Nd9E2rJvrku7g0-qBz_PLt6zl4nwXeIWabqHBMyhPbLsUJ0BFyad9VQo-mEaqotj4C-_r7xeA1sWELPu8HtL_TvaoYMDbNPIglCVW5xbMwmq1qvT13SY34T9Uj3BbyJ7XyOG6zWZVFruJRoOMLnrEymgH5O8fVm5oRrL6C24Q0IJ81RPVyFGEYJ5I0-LS7NW3oiq5gTgqUij01mz0S1pyjvzxOMtIJePiBONKSwegxd-gY6T964PBt-fcMwusu9bfPYNs" />
+                        <button
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="material-symbols-outlined text-slate-900">visibility</span>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-1 mb-2">
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="text-[10px] text-slate-400 font-bold ml-1">(58)</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">Temple Oudh</h3>
+                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">Sacred resinous notes for deep meditation.
+                        </p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-xl font-display font-bold text-primary">₹799</span>
+                            <button
+                                class="bg-primary/10 hover:bg-primary text-primary hover:text-white p-2 rounded-lg transition-colors">
+                                <span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div
+                    class="group relative flex flex-col bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-primary/5">
+                    <div class="relative aspect-square overflow-hidden">
+                        <img alt="Lavender Mist"
+                            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                            data-alt="Lavender sprigs and calm mood wellness products"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbeJnVq9a1_M0UQH47n-koA6tfEJlApp0BoYmLsU2NxEhCQcbYEXjQ9Kxc-uDNzSi-Ru9rkXqBXA_1G-GZIMMy1KchO5zBvlRczE4bnj8bjKhBqxCw4uftVEXhcKifOmgItb-M1A666frGKI4e3lBDjWEgha4F-GdMckMtdhzE9RephMtLk4uAPzninxRZa7UzDGyaQyIN6NMno3IiqYwSarZJrewxH7oLvgO7Ly1ddsSHGMyq4Fjnnc9yfIuBNDtinqc5TFeGmQE" />
+                        <button
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="material-symbols-outlined text-slate-900">visibility</span>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-1 mb-2">
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm text-primary">star</span>
+                            <span class="text-[10px] text-slate-400 font-bold ml-1">(27)</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">Lavender Mist</h3>
+                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">Calming essential oils of French lavender.
+                        </p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-xl font-display font-bold text-primary">₹425</span>
+                            <button
+                                class="bg-primary/10 hover:bg-primary text-primary hover:text-white p-2 rounded-lg transition-colors">
+                                <span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Brand: Our Story -->
+        <section class="py-24 px-6 overflow-hidden">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -top-10 -left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+                    <img alt="Craftsmanship"
+                        class="relative rounded-2xl shadow-2xl z-10 w-full object-cover aspect-[4/5]"
+                        data-alt="Handcrafted incense making process with natural materials"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE0aXr5D6hLX29s7kMKqmwH9vNuC4yQ6Ail1ys_5OKzWc4_Ly6DRKQ8JBYJb7b04resHUJabSxle2q3DHSRtRoKSs2NScWXcu6QylG26QI5Qt3px1egtumUs-Q7YX51HMg7E6lFwn433rGlgPtonnMmlHjxG-_R6_Rxcz6aC5P65twpKrKQd_e_6XxjVanvdhSvAh1CYtFsnUtznnXEKlhxlw2STsGEwmjTwJ4MLnsCMlzCgM1F0qthFeCyujdTlvaTxmH4LVgz5I" />
+                </div>
+                <div class="space-y-8">
+                    <span class="text-primary font-bold uppercase tracking-widest text-sm">Since 1994</span>
+                    <h2 class="text-4xl md:text-5xl font-bold leading-tight">The Art of <br /><span
+                            class="italic font-light">Handcrafted Purity</span></h2>
+                    <p class="text-slate-600 dark:text-slate-300 text-lg font-light leading-relaxed">
+                        SatvikSugandh was born from a simple desire: to bring the sacred, calming scents of ancient
+                        India into modern homes. Our process remains unchanged - we hand-roll every stick using
+                        traditional charcoal-free techniques and pure botanical extracts.
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 text-lg font-light leading-relaxed">
+                        We believe that a fragrance isn't just a smell; it's a mood, a memory, and a way to reconnect
+                        with your inner self.
+                    </p>
+                    <button
+                        class="group flex items-center gap-4 text-primary font-bold text-lg transition-all hover:gap-6">
+                        Discover Our Full Story
+                        <span class="material-symbols-outlined">east</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Best Sellers Carousel -->
+        <section class="py-24 px-6 bg-primary/5 dark:bg-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-center justify-between mb-12">
+                    <h2 class="text-3xl font-bold italic">Bestsellers</h2>
+                    <div class="flex gap-4">
+                        <button
+                            class="h-12 w-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button
+                            class="h-12 w-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex gap-8 overflow-x-auto no-scrollbar pb-8 -mx-6 px-6">
+                    <!-- Carousel Item 1 -->
+                    <div class="min-w-[300px] bg-white dark:bg-background-dark rounded-xl p-4 border border-primary/10">
+                        <img alt="Product" class="rounded-lg mb-4 w-full aspect-square object-cover"
+                            data-alt="Golden Glow Premium Incense pack visual"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWwj0HFPaqE1ZANrm1dhydfyk9buT5QWJXdNbsFSmpnajx5PpDoImflCIFdC4GVkk4SHZisISb8ChzIcn8hGixMzYrMJGK3FJimlEqzHsBLhrlSLphDgG-KqKncDNGeG8EOhMyJKpYc6VMJIk_57_DqNYiWCIlC02LX-X0Fii-xP1kVfID4FQTHqHEqwWt7JA3EjoEEPSDLYjjO7mMuGAJd1yZ12dnZD0uFxEBplv0EN03dRi-5M23b9Pc7tZLr2ByK-21oa7vbO4" />
+                        <h4 class="font-bold">Sacred Guggul</h4>
+                        <p class="text-primary font-bold">₹350</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="min-w-[300px] bg-white dark:bg-background-dark rounded-xl p-4 border border-primary/10">
+                        <img alt="Product" class="rounded-lg mb-4 w-full aspect-square object-cover"
+                            data-alt="Royal Jasmine floral incense sticks packaging"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXP2TWvOJLb-fgabtE8phKGGmm4wDOosbgszd-UigQ6nDCdx95MVIdlZ-68xetcCcC9_P0GQHSJ_CFhW0qxmJIzvCKZ5y_9Z1TRPB5pqeNLTqxKAzXqUbNe2ZJ65R6dn82BX_pIihff__YGoBmf4IedE6gDseU0P5T3lztJmOeq_zz0g0fSNGWDR4FKbMc2fZmLMrbLnCnfGpdfHxuLXraMG9rytItOPSm14Ts8uG0L-yEgAyW2OE5AJkiPdAYUmPs-bACD2nNxFI" />
+                        <h4 class="font-bold">Royal Jasmine</h4>
+                        <p class="text-primary font-bold">₹499</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="min-w-[300px] bg-white dark:bg-background-dark rounded-xl p-4 border border-primary/10">
+                        <img alt="Product" class="rounded-lg mb-4 w-full aspect-square object-cover"
+                            data-alt="Cedarwood and Pine forest aroma incense"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs9w4dsnAQYyNmoC1bzK0M68SdDjQxKQ1rXpG4gCxJhaJVrslxOVWJLLqeYs9nQG-HffHrwoeffZ1mEBKbD1vPtJSOfhQtULJPwUYE_JKap3bqsAttY1d35Avy4gkDm5N7EeyF96ui4rfz4z9FYYiHYHsIkqEMLZn9XWyJOBBLnwttR2-Ij1Z8075yhUStB_c3yG_JvEbXsLMrU5SA3awIMRcqcD49Zm_NDohSr2fpJ2BtptrE-S4Ysd_2K8kLXkAPHZ-Wm-rmUUs" />
+                        <h4 class="font-bold">Himalayan Cedar</h4>
+                        <p class="text-primary font-bold">₹550</p>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="min-w-[300px] bg-white dark:bg-background-dark rounded-xl p-4 border border-primary/10">
+                        <img alt="Product" class="rounded-lg mb-4 w-full aspect-square object-cover"
+                            data-alt="Floral infusion incense set for yoga"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC8bhwBf_7Mk2mFnAXqtvwVgmzttN06_EDwS-jNB4YfrycD4MNKJJPhXfW1n2EeBON_D7L8TkxLpgMHkaluF6MTn1u4qWv78o0fFvegElyC9ilArIS08xqDhPWGDwi3yJWkXaHbHCuRVOxa2Zmu11QVdSHucHbOuWbtC4k6ohavh3TnOWJLn_Yn-lBbGOGfcfMdhuYDfuSVN1n0ZykAI4PfscWHc6VrEa5XpvzFHavZX3HHYqABQZuTnnwQPWleEV-ANr6ISWl2e0" />
+                        <h4 class="font-bold">Yoga Blend</h4>
+                        <p class="text-primary font-bold">₹425</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 italic">Voices of Tranquility</h2>
+                <p class="text-slate-500">Shared experiences from our community</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="p-10 bg-white dark:bg-background-dark rounded-3xl shadow-sm border border-primary/5 space-y-6">
+                    <div class="flex items-center gap-4">
+                        <img alt="Avatar" class="h-12 w-12 rounded-full border-2 border-primary/20"
+                            data-alt="User profile portrait of a smiling woman"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-KPVEWjPkJ92YRORiGy4_0sHg9VoAiSh5PkS5GIPnxtq7YuhQFXAuNtXbM7YKPIwMecT4GFEFc-rsqMTblhPUKLNG1nM3HshYaYT43ysdsUD8gQxDaJniX-CyU8xw8ilXU0c2wZEqTmlyKJyp5rZRkC3Jq3INbeQtOIxHaHKRV1NLiGmnTWoks1BzI8koAYC8HL4AzNSBgAO_cBbi0zLoTLVsDEy-D6Yrc9335MalOdlnG5hU3FVuiqFXyO4gA5jO1osQlJ-qPYQ" />
+                        <div>
+                            <p class="font-bold">Aditi Sharma</p>
+                            <p class="text-xs text-slate-400">Delhi, India</p>
+                        </div>
+                    </div>
+                    <p class="italic text-slate-600 dark:text-slate-300">"The Mysore Sandalwood sticks are truly divine.
+                        I've tried many brands, but the purity and longevity of SatvikSugandh are unmatched."</p>
+                </div>
+                <div
+                    class="p-10 bg-white dark:bg-background-dark rounded-3xl shadow-sm border border-primary/5 space-y-6">
+                    <div class="flex items-center gap-4">
+                        <img alt="Avatar" class="h-12 w-12 rounded-full border-2 border-primary/20"
+                            data-alt="User profile portrait of a calm man"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRQg9WWQIC-nA_NVQmByFq9hQARVGjed54kZrQ1Myd3wvtig_Hu5Wsm5360lxBU7oEutIdkAUmULYWZBoDAOhiODS4DPrZnPp6EeeDO5aUwIFsXPQ1okDnG5dDlwg_1gusmaEwZNny5IeubO9tGa3C2mu5FRAH8Pn2cWQ0etxkd8AVvU2PXTwyOWelUmeMsI8znxLPcc-zxbOdvZ8UwFwcg_IpGAnv4Q_tugIn1ts2h-Ctwf4WjnUqUL2YqQljtQezeFRWtp52aow" />
+                        <div>
+                            <p class="font-bold">Rohan Mehta</p>
+                            <p class="text-xs text-slate-400">Mumbai, India</p>
+                        </div>
+                    </div>
+                    <p class="italic text-slate-600 dark:text-slate-300">"I use the Spiritual Collection every morning
+                        for my meditation. It transforms my living room into a serene temple space."</p>
+                </div>
+                <div
+                    class="p-10 bg-white dark:bg-background-dark rounded-3xl shadow-sm border border-primary/5 space-y-6">
+                    <div class="flex items-center gap-4">
+                        <img alt="Avatar" class="h-12 w-12 rounded-full border-2 border-primary/20"
+                            data-alt="User profile portrait of a young professional woman"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhLOEKJ08nnAtKp-JHWckllrZY8Fgy2g9fHd42yF_s2r68hZ8MORTP07EW3iHNPO3aMnvJxLUWNsFY4c36q9kQJUcGgUfTDRPsBDkeNms5Fb7gCqDzbbn1uLcNrWklp6HC1Ixs_0LEyn1x2dtS9JhIjVqw06Qli_KW0emUW2wFi0oTOAddGQjvesT32TTbLCTpTAgtIPW3HRtfxo0Vsx_zEiisDSFMiGzKtiHP4hnfHO2S0JTslrsthzHHHM9fT9iLhOgY1m3rjpw" />
+                        <div>
+                            <p class="font-bold">Priya Iyer</p>
+                            <p class="text-xs text-slate-400">Bangalore, India</p>
+                        </div>
+                    </div>
+                    <p class="italic text-slate-600 dark:text-slate-300">"Excellent packaging and high-quality incense.
+                        These make the perfect gifts for housewarmings and festivals."</p>
+                </div>
+            </div>
+        </section>
+        <!-- Social Gallery -->
+        <section class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="text-2xl font-bold">#SatvikMoments</h2>
+                <a class="text-primary font-bold" href="#">@satviksugandh</a>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                <div class="aspect-square overflow-hidden bg-slate-100 group">
+                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                        data-alt="Lifestyle photo of lit incense in a modern apartment"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7yK5VIAuKPORc3NS5elkr3faBPx5lYmlV7heSejeRlPVbXFeFLNy0h0d7wTbF4xzkT1TT9COPVN6gXhHNkrFlpYx4_JSJuzHJi8B9W1ehlvvRhSbsFaVl6tuKV05FO5rEO6jM68Q1MX7w7JOzRCtBthk3YFiFIvwEQG2RqsNBrqf91CCDUlBfhvFTtrUvLGERn4b78cyApBofMqMv4V0PX9DOhBWDq4aFOA21c7u6woO2DCG2RB47XxWNu1OF70nfeXiK7JvZEdk" />
+                </div>
+                <div class="aspect-square overflow-hidden bg-slate-100 group">
+                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                        data-alt="Meditation corner with incense and yoga mat"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJHW9SdOPkmF3L2yclPhrYXC5O7x2olXBmIsqb_Ij3Na9sXQadj1iwDg0P7fqXhaWUt9KSoxhEzcVw-8b7LpIsBWqkn5p9LZ9B1UIfK1lr6szqivYa3ghrTM73iFqV4NWnWpSjnYhFlDhJ9tcS46ORJeNz_tboUp9ilVv0y6uhV3fj_L88wUUxOAWVx5T1v2TDthqem7eJV1Vgh73YthFoEh3euxIbr2Pwken1Rd6SEnEtZjdkYkyG7ssiOwOD439NWMgh7eaDCaM" />
+                </div>
+                <div class="aspect-square overflow-hidden bg-slate-100 group">
+                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                        data-alt="Close up of hands rolling natural incense sticks"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsHIuesUFETOCWYvJUpIpAvP3POs4UTfqcIZNWkIb9KSstlWFX1kWpFl_kAVgA2GEpFivvAwIuvAHnTbCJJLfdgfmPaCHZFZbehApzR2Slkp20VtvEPCnwpmZcMNIzzstn9SS0qHanLgqkA0vrppR_IEudDrNERhyksiMRYo4_NCMg3SaKsJXObWA0f0MOrDf8Br2oJc4X2_O6lupyjGg8wIN8PogfRjuNxDsQtk9s6dsoyjXUfeQEJF4K1NV3F6c7nix85vLZ0Uk" />
+                </div>
+                <div class="aspect-square overflow-hidden bg-slate-100 group">
+                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                        data-alt="Gift box being unboxed in aesthetic setting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaxUqOmSrsO_VEVAXERW72YZ6VGw8TiizejrBMBTImmJHpuCa-P7aKEs-lKKmdovnDf67h-c5vO-E8YVCNvm3UmHj-q6um6dQ4bc2gBcIkIKXCu5sioZtQJnOqrF2qcV1_dInXR9-K_BgMQKrsLz8atK9qEcswgSh-vvTYF4vBx_Km6jgNJtbNpTWe4zsOVu8mHE0Lnoh43nLgJQsDFtyKt6xnCduhWCdt307lg18PbzgAl38ng8PkAOAdtP2iRewKM8kvvDKuB20" />
+                </div>
+                <div class="aspect-square overflow-hidden bg-slate-100 group">
+                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                        data-alt="Tea ritual with incense sticks burning nearby"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw5T2QthHLjzFq8d4t8L2-_7VHpTRqmG8ktloWp0Zr3EIBn2SetKaPnQbQd3qpkYMxJ8wfOskFWw7ETYvNXxRTmYUT0xTqniP2xSSk_Fbgl_eYUNzXDDjxLBa1hUHqpnCbgq66O-uSGVjTf8uNu20_EDUwLjcBhTjW5XsCWD12P4RRy9MAEy4Ugtm9fUortRzea1VDOP7Kaho0DD1wsWz19hKGk-lIby3FBlsaLy3XXMqkW_TGTMRkDHyd9UvMNwfb1awzHqMEnKs" />
+                </div>
+                <div class="aspect-square overflow-hidden bg-slate-100 group">
+                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                        data-alt="Minimalist wooden incense holder on white shelf"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3ieZtC41pOdm9Cfy9wNnHiJ2dR0xYhIrKfKGnJl6CccKUo5HuUXhnyBoPMB8nxFRt5xcW1bcbURyuYUGYIHyjXs2SP3j15uKbt15c8PfH22MGMkYk7kJjo2Ow6gBIHjApywA3xQ93XKw8CuH5NnrTp2-WhdlvyZF4HBuWlWBfdtwRK93ZaF3s2YxK1vP8CqpVajCwfDG8eB8Alr4Ww7Ai4pW13ZWwMDWgnAqGA-_t5Uu6YtjR2P2U5e4m4GeXo1d3DUeQ0vsdYsI" />
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter -->
+        <section class="py-24 px-6">
+            <div
+                class="max-w-4xl mx-auto bg-primary rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2">
+                </div>
+                <div class="relative z-10 space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-bold font-display italic">Scent-sational Updates</h2>
+                    <p class="text-white/80 max-w-lg mx-auto">Join our inner circle for exclusive early access to new
+                        collections and soulful rituals delivered to your inbox.</p>
+                    <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mt-8">
+                        <input
+                            class="flex-1 bg-white/10 border border-white/20 rounded-full px-6 py-4 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/50 focus:outline-none backdrop-blur-sm"
+                            placeholder="Your Email Address" type="email" />
+                        <button
+                            class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-slate-100 transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-background-light dark:bg-background-dark border-t border-primary/10 pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div class="space-y-6">
+                <a class="flex items-center gap-2" href="#">
+                    <img alt="SatvikSugandh Logo" class="h-10 w-10" data-alt="Minimalist lotus logo dark version"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuALgPapmrf7QDuY8BzrZ51lzP75xjy08FXgeCa6bt2iczdRdaPwYvt-eGF3tyZM2rHtpHzNP8odiYi9o-agx5KzRckkYvh2TJJ5c6za499PY-86oCChKLTJcvdJRIgnpGia3EbSwiDBGKlRsnrqr4MqH-COiu8Q1SaO5irtuZDhp6gxQevrVIN14GHUor0kW1_UwPq1VSGyphSDp2sba7z-yfAE-J3iMNseis9HsAn1OUoZpF5Pt3EztBpNxFfbRT-eRx2o9jE4WSM" />
+                    <span class="text-2xl font-bold text-primary font-display">SatvikSugandh</span>
+                </a>
+                <p class="text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+                    Preserving the traditional heritage of Indian aromatherapy through sustainable practices and pure
+                    natural ingredients.
+                </p>
+                <div class="flex gap-4">
+                    <a class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                        href="#">
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                            <path
+                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.599 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                        href="#">
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-8 uppercase tracking-widest text-sm">Quick Links</h4>
+                <ul class="space-y-4 text-slate-500 dark:text-slate-400 font-light">
+                    <li><a class="hover:text-primary transition-colors" href="#">Our Fragrances</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Collections</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Gifts &amp; Kits</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Subscriptions</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Corporate Gifts</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-8 uppercase tracking-widest text-sm">Customer Care</h4>
+                <ul class="space-y-4 text-slate-500 dark:text-slate-400 font-light">
+                    <li><a class="hover:text-primary transition-colors" href="#">Shipping Policy</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Exchanges</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold mb-8 uppercase tracking-widest text-sm">Visit Us</h4>
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-primary">location_on</span>
+                    <p class="text-slate-500 dark:text-slate-400 font-light">12/A, Heritage Enclave,<br />Old City,
+                        Udaipur, India</p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-primary">mail</span>
+                    <p class="text-slate-500 dark:text-slate-400 font-light">care@satviksugandh.com</p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-primary">call</span>
+                    <p class="text-slate-500 dark:text-slate-400 font-light">+91 98765 43210</p>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto pt-10 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-400 font-light">
+            <p>© 2024 SatvikSugandh. All Rights Reserved.</p>
+            <div class="flex items-center gap-8">
+                <img alt="Payment Methods" class="h-6 opacity-50 grayscale"
+                    data-alt="Logos of secure payment methods including cards and UPI"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB--Qcq4ylo8_m0y2yYorgV0rJZ_5gdcnSA3_Y5hckBOTIWFDgMCBAJCa6q22M2uHEJyPO-d7BFAx9VMbQG6-9F3QfyGk5g5i9EAQAtKQCrxB3jxVt5PQa4lC4KCUoMbHyTD6Nsjrpe7jY-TDbkTqCcXpu814S1SbTHt0Fg2e39NrbrywrDxOB0WO-vHvDChEGMXD43IZ-ZvrJ_lEcbqXrzxTxt0hekP3BlGDpsCFrCItcVRw10YHFoYRJdKo8Wv7sqczGzZx20es" />
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

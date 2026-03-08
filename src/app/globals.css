@@ -22,3 +22,12 @@ body{
 .swiper-button-prev {
   color: #fef1de !important; /* ✅ arrow color */
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
