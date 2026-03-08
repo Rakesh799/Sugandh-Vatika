@@ -8,9 +8,9 @@ import "swiper/css/pagination";
 
 export default function HeroSection() {
   const images = [
-    "/images/girl2.jpg",
-    "/images/girl1.jpg",
-    "/images/girl4.jpg",
+    "/images/stick-images/sticks-1.png",
+    "/images/stick-images/sticks-2.png",
+    "/images/stick-images/sticks-3.png",
   ];
 
   return (
