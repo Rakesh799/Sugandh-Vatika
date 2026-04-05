@@ -10,7 +10,7 @@ export default function AboutBrandSection() {
             alt="Craftsmanship"
             className="relative rounded-2xl shadow-2xl z-10 w-full object-cover aspect-[4/5]"
             data-alt="Handcrafted incense making process with natural materials"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE0aXr5D6hLX29s7kMKqmwH9vNuC4yQ6Ail1ys_5OKzWc4_Ly6DRKQ8JBYJb7b04resHUJabSxle2q3DHSRtRoKSs2NScWXcu6QylG26QI5Qt3px1egtumUs-Q7YX51HMg7E6lFwn433rGlgPtonnMmlHjxG-_R6_Rxcz6aC5P65twpKrKQd_e_6XxjVanvdhSvAh1CYtFsnUtznnXEKlhxlw2STsGEwmjTwJ4MLnsCMlzCgM1F0qthFeCyujdTlvaTxmH4LVgz5I"
+            src="/images/craft/craft-man.png"
           />
         </div>
         <div className="space-y-8">
