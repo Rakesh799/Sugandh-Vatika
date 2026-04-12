@@ -11,6 +11,7 @@ export default function GymSection() {
         { day: "Friday", workout: "Leg" },
         { day: "Saturday", workout: "Back Bicep Abs" },
     ];
+    
     return (
         <>
             <div className="grid grid-cols-2 border border-brown rounded-lg overflow-hidden text-sm font-medium w-80 mx-auto my-[30px]">
