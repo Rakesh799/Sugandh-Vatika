@@ -57,7 +57,9 @@ export default function RootLayout({ children }) {
         </noscript>
 
         <Header />
-        {children}
+        <main>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

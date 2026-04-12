@@ -13,6 +13,7 @@ export default function SocialGallerySection() {
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
             data-alt="Lifestyle photo of lit incense in a modern apartment"
             src="/images/moments/moment-1.png"
+            alt="moment-1"
           />
         </div>
         <div className="aspect-square overflow-hidden bg-slate-100 group">
@@ -20,6 +21,7 @@ export default function SocialGallerySection() {
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
             data-alt="Meditation corner with incense and yoga mat"
             src="/images/moments/moment-2.png"
+            alt="moment-2"
           />
         </div>
         <div className="aspect-square overflow-hidden bg-slate-100 group">
@@ -27,6 +29,7 @@ export default function SocialGallerySection() {
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
             data-alt="Close up of hands rolling natural incense sticks"
             src="/images/moments/moment-3.png"
+            alt="moment-3"
           />
         </div>
         <div className="aspect-square overflow-hidden bg-slate-100 group">
@@ -34,6 +37,7 @@ export default function SocialGallerySection() {
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
             data-alt="Gift box being unboxed in aesthetic setting"
             src="/images/moments/moment-4.png"
+            alt="moment-4"
           />
         </div>
         <div className="aspect-square overflow-hidden bg-slate-100 group">
@@ -41,6 +45,7 @@ export default function SocialGallerySection() {
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
             data-alt="Tea ritual with incense sticks burning nearby"
             src="/images/moments/moment-5.png"
+            alt="moment-5"
           />
         </div>
         <div className="aspect-square overflow-hidden bg-slate-100 group">
@@ -48,6 +53,7 @@ export default function SocialGallerySection() {
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
             data-alt="Minimalist wooden incense holder on white shelf"
             src="/images/moments/moment-6.png"
+            alt="moment-6"
           />
         </div>
       </div>
