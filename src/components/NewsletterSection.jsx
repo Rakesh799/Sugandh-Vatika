@@ -1,6 +1,6 @@
 export default function NewsletterSection() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-6 px-6">
       <div className="max-w-4xl mx-auto bg-brown rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div className="relative z-10 space-y-6">

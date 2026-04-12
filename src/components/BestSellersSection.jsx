@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function BestSellersSection() {
   return (
-    <section className="py-24 px-6 bg-primary/5 dark:bg-white/5">
+    <section className="py-6 px-6 bg-primary/5 dark:bg-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-3xl font-bold italic">Bestsellers</h2>

@@ -2,17 +2,19 @@ import { ArrowRight } from "lucide-react";
 
 export default function AboutBrandSection() {
   return (
-    <section className="py-24 px-6 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section className="py-6 px-6 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
         <div className="relative">
-          <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+          
           <img
             alt="Craftsmanship"
-            className="relative rounded-2xl shadow-2xl z-10 w-full object-cover aspect-[4/5]"
+            className="rounded-3xl shadow-lg"
             data-alt="Handcrafted incense making process with natural materials"
             src="/images/craft/craft-man.png"
           />
         </div>
+        
         <div className="space-y-8">
           <span className="text-primary font-bold uppercase tracking-widest text-sm">Since 1994</span>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
@@ -34,6 +36,7 @@ export default function AboutBrandSection() {
 
           </button>
         </div>
+
       </div>
     </section>
   );

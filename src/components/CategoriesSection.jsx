@@ -1,8 +1,8 @@
 
 export default function CategoriesSection() {
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+    <section className="py-14 px-6 max-w-7xl mx-auto">
+            <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-4">Discover the Collections</h2>
                 <div className="h-1 w-20 bg-primary mx-auto rounded-full"></div>
             </div>
